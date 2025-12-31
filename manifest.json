@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Schedule Maker",
+  "version": "1.0",
+  "description": "Extracts schedule from Student Information System on Ateneo de Davao University's website and generates a timetable.",
+  "action": 
+  {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": 
+  [
+    {
+      "matches": ["https://sis.addu.edu.ph/registration*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
